@@ -9,8 +9,10 @@ const DotRing=()=>{
     return(
         <div>
             <div style={{left:`${x}px`,top:`${y}px`}}
-            className="ring">
-
+            className="dotRing">
+            </div>
+            <div style={{left:`${x}px`,top:`${y}px`}}
+            className="dot">
             </div>
         </div>
     )
