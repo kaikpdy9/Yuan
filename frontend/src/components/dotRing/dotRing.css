@@ -1,0 +1,11 @@
+.ring{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    border: 2px solid rgba(31, 30, 30, 0.808);
+    border-radius: 100%;
+    z-index: 999;
+    pointer-events: none;
+}

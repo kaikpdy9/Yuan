@@ -1,11 +1,14 @@
 import logo from './logo.svg';
-import './App.css';
+import DotRing from "./components/dotRing/dotRing";
 
 function App() {
   return (
-    <div className="App text-3xl font-blod underline">
-      123
-    </div>
+    <>
+      <div>123</div>
+       <div>
+           <DotRing/>
+       </div>
+    </>
   );
 }
 
