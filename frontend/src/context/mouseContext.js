@@ -12,7 +12,6 @@ const MouseProvider=(props)=>{
         setCursorType(cursor)
     }
 
-    console.log(props,'props')
 
     return(
     <MouseContext.Provider value={{

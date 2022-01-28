@@ -1,18 +1,20 @@
 import useMousePosition from "../../hooks/useMousePosition";
 import './dotRing.css'
+import {MouseContext} from "../../context/mouseContext";
+import {useContext} from "react";
 
 const DotRing=()=>{
 
     const {x,y}=useMousePosition()
+    const {cursorType,setCursorType}=useContext(MouseContext)
 
-    console.log(x,y,'mouse')
     return(
         <div>
             <div style={{left:`${x}px`,top:`${y}px`}}
-            className="dotRing">
+            className={"dotRing " + cursorType}>
             </div>
             <div style={{left:`${x}px`,top:`${y}px`}}
-            className="dot">
+            className={"dot " + cursorType}>
             </div>
         </div>
     )
