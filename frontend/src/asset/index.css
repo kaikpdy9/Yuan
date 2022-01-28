@@ -31,7 +31,11 @@
 @tailwind components;
     @layer components {
         .header-style{
-            @apply h-20 bg-yellow-200 flex justify-around
+            @apply h-20 bg-yellow-200 flex justify-around fixed w-full left-0 top-0;
+            transition: ease 0.4s;
+            &--scrolled {
+                 height: 40px;
+             }
         }
     }
 

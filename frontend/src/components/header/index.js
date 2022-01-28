@@ -24,6 +24,7 @@ const Header=()=>{
                 <div onMouseEnter={()=>setCursorType("hovered")}
                 onMouseLeave={()=>setCursorType("")}>you</div>
             </div>
+            <div className="h-20">&#xa0;</div>
         </div>
     )
 }
