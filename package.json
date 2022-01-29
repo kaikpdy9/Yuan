@@ -10,20 +10,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kaikpdy9/YuanYuan.git"
+    "url": "git+https://github.com/kaikpdy9/Yuan.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kaikpdy9/YuanYuan/issues"
+    "url": "https://github.com/kaikpdy9/Yuan/issues"
   },
-  "homepage": "https://github.com/kaikpdy9/YuanYuan#readme",
+  "homepage": "https://github.com/kaikpdy9/Yuan#readme",
   "devDependencies": {
     "nodemon": "^2.0.15"
   },
   "dependencies": {
     "dotenv": "^14.3.2",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "mongoose": "^6.1.8"
   }
 }
