@@ -2,38 +2,47 @@
 @layer base {
     @font-face {
         font-family:Ceviche;
-        src: url("./font/CevicheOne-Regular.ttf");
+        src: url("./font/NotoSerif-Regular.ttf");
         font-size: 1.5em;
     }
 
     .Ceviche{
         font-family: Ceviche;
         font-size: 16px;
-        font-weight: bolder;
+        font-weight: 300;
     }
     body{
-        font-size: 16px;
+        font-size: 1em;
         font-weight: normal;
     }
     h1 {
-        font-size: 33.184px;
+        font-size: 3.052rem;
         font-weight: bold;
     }
     h2 {
-        font-size: 31px;
+        font-size: 2.441rem;
         font-weight: bold;
     }
     h3 {
-        font-size: 25.92px;
+        font-size: 1.953rem;
+        font-weight: bold;
+    }
+    h4 {
+        font-size: 1.563rem;
+        font-weight: bold;
+    }
+    h5 {
+        font-size: 1.25rem;
         font-weight: bold;
     }
 }
 @tailwind components;
     @layer components {
         .header-style{
-            @apply h-20 bg-yellow-200 flex justify-around fixed w-full left-0 top-0;
+            @apply bg-dark-five fixed w-full left-0 top-0 py-20;
             transition: ease 0.4s;
         }
+
     }
 
 @tailwind utilities;

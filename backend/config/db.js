@@ -1,19 +1,20 @@
-import mongoose from "mongoose"
+import mongoose from 'mongoose'
 
-console.log(process.env.MONGO_URL)
 
-const connectDB= async()=>{
+const connectBD = async ()=>{
     try{
-        await mongoose.connect('mongodb://localhost:27017/please',{
+        await mongoose.connect(process.env.MONGO_URL,{
             useUnifiedTopology: true,
             useNewUrlParser: true,
-        })
-    }catch (error){
+        });
+        console.log('链接成功')
+    } catch (error){
         console.log(error)
         process.exit(1)
     }
 }
 
-const db =mongoose.connection
+const db = mongoose.connection
 
-export default connectDB()
+
+export default connectBD

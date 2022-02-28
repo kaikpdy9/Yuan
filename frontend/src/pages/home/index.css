@@ -1,0 +1,12 @@
+@media (min-width: 639.98px) {
+    .outsideOne {
+        background-image: url("./image/fakeFill1.png");
+        background-size: cover;
+        overflow: hidden;
+    }
+    .textCenter{
+        position: absolute;
+        top: 60%;
+        left: 30%;
+    }
+}
