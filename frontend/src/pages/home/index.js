@@ -1,29 +1,17 @@
 import React from "react";
-import bannerJpg from './image/banner.jpg'
-import fakeFill1 from './image/fakeFill1.png'
 import './index.css'
+import DarkSide from "./components/darkSide";
 
 const HomePage=()=>{
     return(
     <div className="Ceviche bg-dark-five">
-        <div className="container mx-auto pt-40">
-                    <div className="outsideOne h-160 w-full">
-                        <div className="textCenter">
-                            <p className="text-6xl font-bold">How time flies</p>
-                        </div>
+        <div className="mx-auto pt-40">
+                    <div className=" h-banner w-full">
+                            <p className="text-banner Megrim text-center leading-banner">How time flies</p>
+                            <p className="text-9xl text-center leading-banner">Yuan A bdad <span className="text-xl"> Yuan A bdad</span></p>
+                            <p className="text-banner Megrim leading-banner text-center ml-40">How time flies</p>
                     </div>
-            <div className="grid-cols-12 grid">
-                <div className="col-span-1"></div>
-                <div className="col-span-4">
-                    123
-                </div>
-                <div className="col-span-2"></div>
-                <div className="col-span-4">
-                    213
-                </div>
-                <div className="col-span-1"></div>
-
-            </div>
+                    <DarkSide/>
         </div>
     </div>)
 }

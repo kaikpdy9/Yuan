@@ -12,9 +12,19 @@ module.exports = {
         'dark-five': '#EFEFEF',
       },
       height:{
+        'banner':'26rem',
         '136':'40rem',
         '160':'48rem',
-      }
+      },
+      fontSize:{
+        'banner':'8rem'
+      },
+      lineHeight:{
+        'banner':'8rem'
+      },
+      textColor:{
+        'dark': '#EFEFEF',
+      },
     },
   },
   plugins: [],

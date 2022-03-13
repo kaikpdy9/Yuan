@@ -11,6 +11,15 @@
         font-size: 16px;
         font-weight: 300;
     }
+    @font-face {
+        font-family: Megrim;
+        src: url("./font/Megrim-Regular.ttf");
+    }
+    .Megrim{
+        font-family: Megrim;
+        font-size: 16px;
+        font-weight: 300;
+    }
     body{
         font-size: 1em;
         font-weight: normal;
@@ -33,13 +42,13 @@
     }
     h5 {
         font-size: 1.25rem;
-        font-weight: bold;
+        font-weight: normal;
     }
 }
 @tailwind components;
     @layer components {
         .header-style{
-            @apply bg-dark-five fixed w-full left-0 top-0 py-20;
+            @apply bg-dark-five fixed w-full left-0 top-0 py-6;
             transition: ease 0.4s;
         }
 
