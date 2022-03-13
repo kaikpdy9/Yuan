@@ -17,10 +17,10 @@ module.exports = {
         '160':'48rem',
       },
       fontSize:{
-        'banner':'8rem'
+        'banner':'7.5rem'
       },
       lineHeight:{
-        'banner':'8rem'
+        'banner':'7.5rem'
       },
       textColor:{
         'dark': '#EFEFEF',
