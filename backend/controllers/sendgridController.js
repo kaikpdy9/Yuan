@@ -6,7 +6,6 @@ dotenv.config()
 
 sgMail.setApiKey(process.env.SEND_GRID);
 const sendgirdController=asyncHandler(async (req,res)=>{
-    console.log('hi')
     const {email,name}=req.body
     console.log(email,name)
     const registerUrl=`http://zhongyuanyuan.com/review?email=${email}&name=${name}`
