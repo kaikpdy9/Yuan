@@ -2,7 +2,7 @@ import React from "react";
 
 const DarkSide=()=>{
     return(
-    <div className="bg-dark-one text-dark" onClick={()=>{console.log('hi')}}>
+    <div className="bg-dark-one text-dark">
         <div className="text-center pt-10">
             <h5 className="m-6">Lower me down...</h5>
             <h5 className="m-6">I know it's endless darkness soon</h5>

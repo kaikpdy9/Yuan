@@ -1,6 +1,7 @@
 import React from "react";
 import './index.css'
 import DarkSide from "./components/darkSide";
+import MiddleLayer from "./components/middleLayer";
 
 const HomePage=()=>{
     return(
@@ -12,6 +13,7 @@ const HomePage=()=>{
                             </div>
                             <p className="text-banner Megrim leading-banner text-center ml-40">Let it <span className="Ceviche leading-banner text-9xl"> be</span></p>
                     </div>
+                    <MiddleLayer/>
                     <DarkSide/>
         </div>
     </div>)
