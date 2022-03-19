@@ -4,7 +4,7 @@ const DarkSide=()=>{
     return(
     <div className="bg-dark-one text-dark" onClick={()=>{console.log('hi')}}>
         <div className="text-center pt-10">
-            <h5 className="m-6">Crash ...</h5>
+            <h5 className="m-6">Lower me down...</h5>
             <h5 className="m-6">I know it's endless darkness soon</h5>
             <h5 className="m-6">All the memories of the past</h5>
             <h5 className="m-6">Emerge</h5>

@@ -3,6 +3,7 @@
         background-image: url("./image/213.png");
         background-size: cover;
         overflow: hidden;
+        width: 100%;
     }
     .textCenter{
         position: absolute;
