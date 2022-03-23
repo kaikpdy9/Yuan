@@ -1,9 +1,26 @@
-import React from "react";
+import React, {useEffect} from "react";
 import './index.css'
 import DarkSide from "./components/darkSide";
 import MiddleLayer from "./components/middleLayer";
+import {useHistory} from "react-router-dom";
+import {getQueryVariable} from "../../utils/utils";
 
 const HomePage=()=>{
+
+    const router=useHistory()
+
+    useEffect(()=>{
+        const search=router.location.search
+        if(search.includes('redirect=register')){
+        const email=getQueryVariable('email',search);
+        const name=getQueryVariable('name',search);
+        sessionStorage.setItem('name',name)
+        sessionStorage.setItem('email',email)
+        router.replace('/register')
+        console.log(email,name,'search')
+        }
+    },[])
+
     return(
     <div className="Ceviche bg-dark-five">
         <div className="mx-auto pt-40">
