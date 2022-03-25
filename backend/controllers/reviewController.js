@@ -6,15 +6,17 @@ import asyncHandler from "express-async-handler";
 //  @access Public
 
 const createReview = asyncHandler(async (req,res)=>{
-    const {name,comment}=req.body
+    const {name,comment,title}=req.body
 
     const review =await Review.create({
         name,
-        comment
+        comment,
+        title
     })
     if(review){
        res.status(201).json({
            name:review.name,
+           title:review.title,
            comment:review.comment,
        })
     }else {

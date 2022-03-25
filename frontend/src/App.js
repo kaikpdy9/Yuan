@@ -7,21 +7,29 @@ import Account from "./pages/account";
 import DesignSystem from "./pages/designSystem";
 import SignUp from "./pages/sign/signUp";
 import Register from "./pages/sign/signUp/register";
+import Reviews from "./pages/reviews";
+import SignIn from "./pages/sign/signIn";
+import AuthContextProvider from "./context/authContext";
+
 
 function App() {
   return (
       <MouseProvider>
       <DotRing/>
       <Router basename="/">
+          <AuthContextProvider>
           <Layout>
           <Switch>
               <Route exact path={'/'} component={HomePage} />
               <Route exact path={'/account'} component={Account} />
               <Route exact path={'/design'} component={DesignSystem} />
-              <Route exact path={'/signup'} component={SignUp} />
+              <Route exact path={'/sign-up'} component={SignUp} />
+              <Route exact path={'/sign-in'} component={SignIn} />
               <Route exact path={'/register'} component={Register} />
+              <Route exact path={'/reviews'} component={Reviews} />
           </Switch>
           </Layout>
+          </AuthContextProvider>
       </Router>
       </MouseProvider>
   );
