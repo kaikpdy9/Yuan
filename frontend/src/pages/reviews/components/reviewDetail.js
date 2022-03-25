@@ -6,7 +6,7 @@ const ReviewDetail=({reviewData})=>{
 
     return(
         <div>
-            {reviewData?.map((index,i)=><div key={i}>123123</div>)}
+            {reviewData?.map((index,i)=><div key={i}>{index.name}: {index.title}</div>)}
         </div>
     )
 }

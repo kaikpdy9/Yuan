@@ -17,7 +17,6 @@ const HomePage=()=>{
         sessionStorage.setItem('name',name)
         sessionStorage.setItem('email',email)
         router.replace('/register')
-        console.log(email,name,'search')
         }
     },[])
 

@@ -1,12 +1,11 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import ReviewDetail from "./components/reviewDetail";
 import {getReview} from "../../api/review/review";
-import {AuthContext} from "../../context/authContext";
 import {addReview} from "../../api/review/review";
 
 const Reviews=()=>{
 
-    const {userName}=useContext(AuthContext)
+    const userName=localStorage.getItem('userName')
 
     const [reviewData,setReviewData]=useState({});
     const [loading,setLoading]=useState(true);
@@ -24,12 +23,11 @@ const Reviews=()=>{
                 setLoading(false)
             }
         })
-    },[])
+    },[loading])
 
     const onSubmit=event=>{
         event.preventDefault();
         addComment();
-        console.log(uploadReview,'upload')
     }
 
     const onChange= event=>{
@@ -38,8 +36,12 @@ const Reviews=()=>{
 
     const addComment=()=>{
         const query=uploadReview;
-        addReview(query).then((res)=>{
-            console.log(res)
+        setLoading(true);
+        addReview(query
+        ).then((res)=>{
+            if (res.status===201){
+                setLoading(false);
+            }
         })
     }
 

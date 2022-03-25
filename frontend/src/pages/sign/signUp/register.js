@@ -27,6 +27,9 @@ const Register=()=>{
             if(res.status===201){
                 sessionStorage.removeItem('name');
                 sessionStorage.removeItem('email');
+                console.log(res,'res')
+                localStorage.setItem('userName',res.data.name);
+                localStorage.setItem('isLogin','true');
                 router.push('/')
             }
         })

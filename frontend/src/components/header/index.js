@@ -1,17 +1,18 @@
-import React, {useContext, useEffect} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {MouseContext} from "../../context/mouseContext";
 import {gsap} from "gsap/dist/gsap";
 import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
 import Logo from "../Logo";
 import {Link} from "react-router-dom";
-import {AuthContext} from "../../context/authContext";
 
 gsap.registerPlugin(ScrollTrigger)
 
 const Header=()=>{
 
+
     const {cursorType,setCursorType}=useContext(MouseContext);
-    const {userName,isLogin}=useContext(AuthContext)
+    const isLogin=localStorage.getItem('isLogin')
+
 
     return(
         <div>

@@ -17,7 +17,6 @@ const SignUp=()=>{
         const query=values;
         sendMail(query).then((res)=>{
             if(res.status===200){
-                console.log(res,'res')
                 setSuccessShow(true)
             }
         })
@@ -26,7 +25,6 @@ const SignUp=()=>{
     const onSubmit= event=>{
         event.preventDefault()
         sendRegisterMail()
-        console.log(values)
     }
 
     return(

@@ -1,11 +1,8 @@
 import React, {useContext, useState} from "react";
 import {signIn} from "../../../api/sign/user";
 import {useHistory} from "react-router-dom";
-import {AuthContext} from "../../../context/authContext";
 
 const SignIn=()=>{
-
-    const {setUserName,setIsLogin}=useContext(AuthContext);
 
     const [signValues,setSignValue]=useState({
         email:"",
@@ -17,9 +14,8 @@ const SignIn=()=>{
         const query=signValues;
         signIn(query).then((res)=>{
             if(res.status===200){
-                console.log(res,'res')
-                setIsLogin(true)
-                setUserName(res.data.name)
+                localStorage.setItem('userName',res.data.name);
+                localStorage.setItem('isLogin','true');
                 router.push('/')
             }
         })
@@ -28,7 +24,6 @@ const SignIn=()=>{
     const onSubmit=event=>{
         event.preventDefault();
         signAccount();
-        console.log(signValues,'values')
     }
 
     const onChange=event=>{

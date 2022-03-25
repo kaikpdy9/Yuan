@@ -14,9 +14,12 @@ export const getReview=()=>{
     })
 }
 
-export const addReview=()=>{
+export const addReview=(params)=>{
+    console.log(params,'p')
+
     return axios({
         url:`${api.addReview}`,
-        method:'post'
+        method:'post',
+        data:params
     })
 }
