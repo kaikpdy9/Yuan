@@ -10,4 +10,10 @@
         top: 30%;
         left: 20%;
     }
+    .outsideTwo{
+        background-image: url("./image/213.png");
+        background-size: cover;
+        overflow: hidden;
+        width: 100%;
+    }
 }
