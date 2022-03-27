@@ -17,14 +17,15 @@ const Header=()=>{
     return(
         <div>
             <div className="header-style Ceviche grid-cols-12 grid">
-                <div className="col-span-12 md:col-span-3 flex justify-center items-center W-40"><Logo/></div>
-                <div className="md:col-span-2"></div>
+                <div className="col-span-12 md:col-span-2 flex justify-center items-center W-40"><Logo/></div>
+                <div className="md:col-span-3"></div>
                 <div className="col-span-12 md:col-span-1 flex justify-center items-center"><Link to={'/'}><h5 onMouseEnter={()=>setCursorType("hovered")}
                                                                                                                onMouseLeave={()=>setCursorType("")}>Homepage</h5></Link></div>
+                <div className="md:col-span-1"></div>
                 <div className="col-span-12 md:col-span-1 flex justify-center items-center"><Link to={'/reviews'}><h5 onMouseEnter={()=>setCursorType("hovered")}
                                                                                                                       onMouseLeave={()=>setCursorType("")}>Notes</h5></Link></div>
                 <div className="md:col-span-1"></div>
-                {isLogin?<div>已经登录啦</div>: <div className="col-span-12 md:col-span-3 flex justify-center items-center">
+                {isLogin?<div className="md:col-span-3">已经登录啦</div>: <div className="col-span-12 md:col-span-3 flex justify-center items-center">
                     <div className="px-4">
                         <Link to="/sign-in">
                             <h5 onMouseEnter={()=>setCursorType("hovered")}

@@ -1,4 +1,7 @@
 import React from "react";
+import dance1 from '../image/dance1.png'
+import dance2 from '../image/dance2.png'
+import MusicSection from "./musicSection";
 
 const DarkSide=()=>{
     return(
@@ -10,22 +13,51 @@ const DarkSide=()=>{
             <h5 className="m-6">Emerge</h5>
 
         </div>
-        <div className="grid-cols-12 grid h-136 pt-10">
+        <div className="grid-cols-12 grid pb-10 pt-10">
             <div className="col-span-1">
-                123
+
             </div>
             <div className="col-span-3 text-center">
-                123
+                <img src={dance1}/>
             </div>
             <div className="col-span-4 text-center">
-                1232
+                <h5 className="m-6">Lower me down...</h5>
+                <h5 className="m-6">Lower me down...</h5>
+                <h5 className="m-6">Dance Till Reach The Moon </h5>
             </div>
             <div className="col-span-3 text-center">
-                123123</div>
+                <img src={dance2}/>
+            </div>
             <div className="col-span-1">
-                123
+
             </div>
         </div>
+
+        <div className="pb-10 pt-10">
+            <p className="text-9xl Megrim">1232132131212312321312312</p>
+        </div>
+
+        <div className="grid-cols-12 grid pb-10 pt-10">
+            <div className="col-span-1">
+
+            </div>
+            <div className="col-span-3 text-center">
+                <img src={dance1}/>
+            </div>
+            <div className="col-span-4 text-center">
+                <h5 className="m-6">Lower me down...</h5>
+                <h5 className="m-6">Lower me down...</h5>
+                <h5 className="m-6">Dance Till Reach The Moon </h5>
+            </div>
+            <div className="col-span-3 text-center">
+                <img src={dance2}/>
+            </div>
+            <div className="col-span-1">
+
+            </div>
+        </div>
+
+        <MusicSection/>
     </div>)
 }
 

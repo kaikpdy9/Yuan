@@ -48,7 +48,7 @@
 @tailwind components;
     @layer components {
         .header-style{
-            @apply bg-dark-five fixed w-full left-0 top-0 py-6;
+            @apply bg-dark-five fixed w-full left-0 top-0 ;
             transition: ease 0.4s;
         }
 
