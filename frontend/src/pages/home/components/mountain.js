@@ -4,7 +4,7 @@ const Mountain=()=>{
     return(
         <div>
             <svg className="w-full block" viewBox="0 0 259 169" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="&#232;&#181;&#132;&#230;&#186;&#144; 3 1" clip-path="url(#clip0_5_2)">
+                <g id="&#232;&#181;&#132;&#230;&#186;&#144; 3 1" clipPath="url(#clip0_5_2)">
                     <g id="&#229;&#155;&#190;&#229;&#177;&#130; 2">
                         <g id="OBJECTS">
                             <path id="Vector" d="M258.16 0H0.380005V168.67H258.16V0Z" fill="#EFEFEF"/>

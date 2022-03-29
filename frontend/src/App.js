@@ -10,6 +10,8 @@ import Register from "./pages/sign/signUp/register";
 import Reviews from "./pages/reviews";
 import SignIn from "./pages/sign/signIn";
 import AuthContextProvider from "./context/authContext";
+import Preload from "./pages/preload";
+import AnimationSvg from "./pages/animationSvg";
 
 
 function App() {
@@ -17,9 +19,11 @@ function App() {
       <MouseProvider>
       <DotRing/>
       <Router basename="/">
+          <Switch>
+          <Route exact path={'/animation'} component={AnimationSvg} />
+          <Route exact path={'/preload'} component={Preload} />
           <AuthContextProvider>
           <Layout>
-          <Switch>
               <Route exact path={'/'} component={HomePage} />
               <Route exact path={'/account'} component={Account} />
               <Route exact path={'/design'} component={DesignSystem} />
@@ -27,9 +31,9 @@ function App() {
               <Route exact path={'/sign-in'} component={SignIn} />
               <Route exact path={'/register'} component={Register} />
               <Route exact path={'/reviews'} component={Reviews} />
-          </Switch>
           </Layout>
           </AuthContextProvider>
+          </Switch>
       </Router>
       </MouseProvider>
   );

@@ -30,11 +30,11 @@
     }
     h2 {
         font-size: 2.441rem;
-        font-weight: normal;
+        font-weight: 200;
     }
     h3 {
         font-size: 1.953rem;
-        font-weight: normal;
+        font-weight: 200;
     }
     h4 {
         font-size: 1.563rem;
@@ -50,6 +50,10 @@
         .header-style{
             @apply bg-dark-five fixed w-full left-0 top-0 ;
             transition: ease 0.4s;
+        }
+
+        .preload-logo{
+            @apply flex;
         }
 
     }
