@@ -1,14 +1,14 @@
 import React, {useEffect, useRef} from "react";
 import createjs from "preload-js"
-//import './index.css'
+import './index.css'
 
 const Preload=()=>{
     const progressRef=useRef();
     const galleryRef=useRef();
     const queue= new createjs.LoadQueue(false);
     const handleFileComplete=(event)=>{
+        console.log(event,'event')
         const type=event.type;
-        console.log(createjs.Types)
         if (type=="fileload"){
             galleryRef.current.appendChild(event.result);
         };

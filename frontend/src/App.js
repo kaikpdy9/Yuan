@@ -18,11 +18,11 @@ function App() {
   return (
       <MouseProvider>
       <DotRing/>
+      <AuthContextProvider>
       <Router basename="/">
           <Switch>
           <Route exact path={'/animation'} component={AnimationSvg} />
           <Route exact path={'/preload'} component={Preload} />
-          <AuthContextProvider>
           <Layout>
               <Route exact path={'/'} component={HomePage} />
               <Route exact path={'/account'} component={Account} />
@@ -32,9 +32,9 @@ function App() {
               <Route exact path={'/register'} component={Register} />
               <Route exact path={'/reviews'} component={Reviews} />
           </Layout>
-          </AuthContextProvider>
           </Switch>
       </Router>
+      </AuthContextProvider>
       </MouseProvider>
   );
 }
