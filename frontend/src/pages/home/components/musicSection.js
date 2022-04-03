@@ -1,9 +1,11 @@
 import React from "react";
+import  transform from '../image/translate.png'
+
 
 const MusicSection=()=>{
     return(
-        <div>
-            MusicSection
+        <div className="w-full">
+            <img src={transform}/>
         </div>
     )
 }

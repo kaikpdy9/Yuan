@@ -1,6 +1,6 @@
 @media (min-width: 639.98px) {
     .outsideOne {
-        background-image: url("./image/213.png");
+        background-image: url("./image/banner.png");
         background-size: cover;
         overflow: hidden;
         width: 100%;
@@ -11,7 +11,7 @@
         left: 20%;
     }
     .outsideTwo{
-        background-image: url("./image/213.png");
+        background-image: url("./image/banner.png");
         background-size: cover;
         overflow: hidden;
         width: 100%;
