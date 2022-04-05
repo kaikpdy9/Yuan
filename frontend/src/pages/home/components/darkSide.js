@@ -4,15 +4,24 @@ import dance1 from '../image/dance1.png';
 import dance2 from '../image/dance2.png';
 import dance3 from '../image/dance3.png';
 import dance4 from '../image/dance4.png';
+import PlayGuitar from "./playGuitar";
 
 const DarkSide=()=>{
     return(
     <div className="bg-dark-one text-dark">
+
         <div className="text-center pt-10">
             <h5 className="m-6">Lower me down...</h5>
             <h5 className="m-6">I know it's endless darkness soon</h5>
             <h5 className="m-6">All the memories of the past</h5>
             <h5 className="m-6">Emerge</h5>
+        </div>
+        <div className="grid grid-cols-12">
+            <div className="col-span-3"></div>
+            <div className="col-span-6 flex justify-center">
+                <PlayGuitar/>
+            </div>
+            <div className="col-span-3"></div>
         </div>
         <div className="grid-cols-12 grid pb-10 pt-10">
             <div className="col-span-1">
