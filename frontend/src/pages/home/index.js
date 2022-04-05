@@ -5,6 +5,7 @@ import MiddleLayer from "./components/middleLayer";
 import {useHistory} from "react-router-dom";
 import {getQueryVariable} from "../../utils/utils";
 import Birthday from "./components/birthday";
+import HomeFooter from "./components/homeFooter";
 
 const HomePage=()=>{
 
@@ -33,6 +34,7 @@ const HomePage=()=>{
                     <MiddleLayer/>
                     <DarkSide/>
                     <Birthday/>
+                    <HomeFooter/>
         </div>
     </div>)
 }
