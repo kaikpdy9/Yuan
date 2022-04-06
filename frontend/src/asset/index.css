@@ -41,8 +41,8 @@
         font-weight: 200;
     }
     h5 {
-        font-size: 1.25rem;
-        font-weight: normal;
+        font-size: 1rem;
+        font-weight: 300;
     }
 }
 @tailwind components;

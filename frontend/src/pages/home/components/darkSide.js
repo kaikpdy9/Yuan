@@ -66,9 +66,10 @@ const DarkSide=()=>{
 
         <div className="text-center">
             <h3 className="mx-6 mb-10">Beats</h3>
-            <h5 className="m-6">The heart beats in time with the sounds of piano</h5>
-            <h5 className="m-6">The hand swaying to the guitar chord</h5>
-            <h5 className="m-6">Each note is remembered, thought about and adored</h5>
+            <h5 className="m-6">The dancer quarrels with solid air</h5>
+            <h5 className="m-6">For that one foot of surface where she stood</h5>
+            <h5 className="m-6">By the bold knife blade of her slashing arm</h5>
+            <h5 className="m-6">She carves herself as from a block of wood</h5>
         </div>
 
         <div className="grid-cols-12 grid pb-10 pt-10">
@@ -78,10 +79,11 @@ const DarkSide=()=>{
             <div className="col-span-3 text-center" id="homeDance1">
                 <img src={dance1}/>
             </div>
-            <div className="col-span-4 text-center">
-                <h5 className="m-6">Lower me down...</h5>
-                <h5 className="m-6">Lower me down...</h5>
-                <h5 className="m-6">Dance Till Reach The Moon </h5>
+            <div className="col-span-4 text-center self-center">
+                <h5 className="m-6">Pity the poor proud dancer who can give</h5>
+                <h5 className="m-6">Death to her ease, so that the dance may live</h5>
+                <h5 className="m-6">Who makes, with pain to every body part</h5>
+                <h5 className="m-6">From perfect will power her imperfect art</h5>
             </div>
             <div className="col-span-3 text-center" id="homeDance2">
                 <img src={dance2}/>
@@ -98,10 +100,11 @@ const DarkSide=()=>{
             <div className="col-span-3 text-center" id="homeDance3">
                 <img src={dance3}/>
             </div>
-            <div className="col-span-4 text-center">
-                <h5 className="m-6">Lower me down...</h5>
-                <h5 className="m-6">Lower me down...</h5>
-                <h5 className="m-6">Dance Till Reach The Moon </h5>
+            <div className="col-span-4 text-center self-center">
+                <h5 className="m-6">Pity the poor rain that only falls</h5>
+                <h5 className="m-6">Down from the cloud-caressing sky, then crawls</h5>
+                <h5 className="m-6">Through dirt and over street. The dancer falls </h5>
+                <h5 className="m-6">Then rises like an oriole over walls</h5>
             </div>
             <div className="col-span-3 text-center" id="homeDance4">
                 <img src={dance4}/>
