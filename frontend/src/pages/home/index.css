@@ -17,3 +17,16 @@
         width: 100%;
     }
 }
+
+@media (max-width: 639.8px) {
+    .outsideOne {
+        background-image: url("./image/banner.png");
+        background-size: cover;
+        overflow: hidden;
+        width: 100%;
+    }
+}
+
+
+
+

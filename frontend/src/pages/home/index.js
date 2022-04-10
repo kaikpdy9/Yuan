@@ -24,12 +24,12 @@ const HomePage=()=>{
 
     return(
     <div className="Ceviche bg-dark-five">
-        <div className="mx-auto pt-40">
-                    <div className="outsideOne h-banner w-full mt-20">
-                            <p className="text-banner Megrim text-center leading-banner">Whisper words of</p>
-                        <div className="flex justify-center"><p className="text-9xl text-center leading-banner">Wisdom</p> <span className="text-sm leading-6 ml-9"><p className="mt-10">Que la force</p><p>soit avec</p><p>vous :)</p></span>
+        <div className="mx-auto md:pt-32 pt-20">
+                    <div className="outsideOne md:h-banner w-full mt-20">
+                            <p className="md:text-banner Megrim text-center md:leading-banner text-4xl">Whisper words of</p>
+                        <div className="flex justify-center"><p className="md:text-9xl text-center md:leading-banner text-4xl">Wisdom</p> <span className="md:text-sm md:leading-6 md:ml-9 ml-2 text-xs"><p className="md:mt-10">Que la force</p><p>soit avec</p><p>vous :)</p></span>
                             </div>
-                            <p className="text-banner Megrim leading-banner text-center ml-40">Let it <span className="Ceviche leading-banner text-9xl"> be</span></p>
+                            <p className="md:text-banner Megrim md:leading-banner text-center md:ml-40 ml-20 text-4xl">Let it <span className="Ceviche md:leading-banner md:text-9xl text-4xl"> be</span></p>
                     </div>
                     <MiddleLayer/>
                     <DarkSide/>

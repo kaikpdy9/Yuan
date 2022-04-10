@@ -1,0 +1,10 @@
+.fadeIn {
+    transform: scale(1) !important;
+    opacity: 1 !important;
+    transition: all 1s 1.5s;
+}
+
+.expand {
+    opacity: 0 !important;
+    transition: opacity 2s !important;
+}

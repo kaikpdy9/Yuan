@@ -13,6 +13,7 @@ module.exports = {
       },
       height:{
         'banner':'26rem',
+        'card':'36rem',
         '136':'40rem',
         '160':'48rem',
       },

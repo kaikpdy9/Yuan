@@ -8,9 +8,9 @@ const HomeFooter=()=>{
                 <img src={footer}/>
             </div>
             <div className="grid grid-cols-12 text-dark-five py-10">
-                <div className="col-span-4 text-center"><h5>Code By kaikpdy9</h5></div>
-                <div className="col-span-4 text-center"><h5>Design By kaikpdy9</h5></div>
-                <div className="col-span-4 text-center"><h5>@Yuan</h5></div>
+                <div className="md:col-span-4 col-span-5 text-center"><p className="md:text-3xl text-base">JOYEUX</p></div>
+                <div className="md:col-span-4 col-span-2 text-center"></div>
+                <div className="md:col-span-4 col-span-5 text-center"><p className="md:text-3xl text-base">ANNIVERSAIRE</p></div>
             </div>
         </div>
     )

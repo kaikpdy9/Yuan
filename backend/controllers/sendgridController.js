@@ -8,7 +8,7 @@ sgMail.setApiKey(process.env.SEND_GRID);
 const sendgirdController=asyncHandler(async (req,res)=>{
     const {email,name}=req.body
     console.log(email,name)
-    const registerUrl=`http://localhost:3000?redirect=register&email=${email}&name=${name}`
+    const registerUrl=`http://zhongyuanyuan.com?redirect=register&email=${email}&name=${name}`
 
     const msg = {
         from: 'kaikpdy9@outlook.com', // Use the email address or domain you verified above

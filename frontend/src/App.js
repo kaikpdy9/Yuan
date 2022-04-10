@@ -21,10 +21,9 @@ function App() {
       <AuthContextProvider>
       <Router basename="/">
           <Switch>
-          <Route exact path={'/animation'} component={AnimationSvg} />
+          <Route exact path={'/'} component={AnimationSvg} />
           <Route exact path={'/preload'} component={Preload} />
           <Layout>
-              <Route exact path={'/'} component={HomePage} />
               <Route exact path={'/account'} component={Account} />
               <Route exact path={'/design'} component={DesignSystem} />
               <Route exact path={'/sign-up'} component={SignUp} />

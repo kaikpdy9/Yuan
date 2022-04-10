@@ -3,7 +3,7 @@ import React from 'react'
 const PlayGuitar=()=>{
     return(
         <div>
-            <svg className="w-full" height="582"  viewBox="0 0 706 582" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-full md:h-136 h-64" viewBox="0 0 706 582" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="&#232;&#181;&#132;&#230;&#186;&#144; 6 1" clip-path="url(#clip0_2_2)">
                     <g id="&#229;&#155;&#190;&#229;&#177;&#130; 2">
                         <g id="&#229;&#155;&#190;&#229;&#177;&#130; 1">

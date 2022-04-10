@@ -33,7 +33,7 @@ const SignIn=()=>{
 
     return(
     <div className="Ceviche bg-dark-five">
-        <div className="mx-auto pt-40 flex justify-center">
+        <div className="mx-auto pt-40 flex justify-center pb-10">
             <form className="w-full max-w-sm" onSubmit={onSubmit}>
                 <div className="md:flex md:items-center mb-6">
                     <div className="md:w-1/3">
@@ -43,7 +43,7 @@ const SignIn=()=>{
                         </label>
                     </div>
                     <div className="md:w-2/3">
-                        <input name="email" value={signValues.email} onChange={onChange} className="bg-dark-four text-dark-five appearance-none border-2 border-dark-one rounded w-full py-2 px-4 focus:outline-none focus:bg-dark-five focus:text-dark-one  focus:border-dark-one"/>
+                        <input name="email" value={signValues.email} onChange={onChange} className="bg-dark-four text-dark-five appearance-none border-2 border-dark-one w-full py-2 px-4 focus:outline-none focus:bg-dark-five focus:text-dark-one  focus:border-dark-one"/>
                     </div>
                 </div>
                 <div className="md:flex md:items-center mb-6">
@@ -54,14 +54,14 @@ const SignIn=()=>{
                         </label>
                     </div>
                     <div className="md:w-2/3">
-                        <input name="password" value={signValues.password} onChange={onChange} className="bg-dark-four text-dark-five appearance-none border-2 border-dark-one rounded w-full py-2 px-4 focus:outline-none focus:bg-dark-five focus:text-dark-one  focus:border-dark-one"/>
+                        <input name="password" value={signValues.password} onChange={onChange} className="bg-dark-four text-dark-five appearance-none border-2 border-dark-one  w-full py-2 px-4 focus:outline-none focus:bg-dark-five focus:text-dark-one  focus:border-dark-one"/>
                     </div>
                 </div>
                 <div className="md:flex md:items-center">
                     <div className="md:w-1/3"></div>
-                    <div className="md:w-2/3">
+                    <div className="md:w-2/3 flex md:justify-start justify-center">
                         <button
-                            className="shadow bg-dark-two text-dark-five hover:bg-dark-one focus:shadow-outline focus:outline-none py-2 px-4 rounded"
+                            className="shadow bg-dark-two text-dark-five hover:bg-dark-one focus:shadow-outline focus:outline-none py-2 px-4 "
                             type="submit">
                             Sign in
                         </button>
