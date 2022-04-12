@@ -35,6 +35,12 @@
     border-width: 3px;
     border-color: #ff2828;
 }
+.dotRing.out{
+    width: 55px;
+    height: 55px;
+    border-width: 3px;
+    border-color: #020202;
+}
 .dot.hovered{
     display: none;
 }

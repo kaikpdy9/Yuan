@@ -16,6 +16,8 @@ module.exports = {
         'card':'36rem',
         '136':'40rem',
         '160':'48rem',
+        'review':'60vh',
+        'submit':'40vh'
       },
       fontSize:{
         'banner':'7.5rem'

@@ -8,6 +8,8 @@ const SignIn=()=>{
         email:"",
         password:""
     })
+    const [tip,setTip]=useState(false);
+    const [empty,setEmpty]=useState(false);
     const router=useHistory()
 
     const signAccount=()=>{
@@ -19,14 +21,25 @@ const SignIn=()=>{
                 router.push('/')
             }
         })
+            .catch((err)=>{
+                if(err.response.status===401){
+                    setTip(true)
+                }
+            })
     }
 
     const onSubmit=event=>{
         event.preventDefault();
-        signAccount();
+        if(signValues.email==""||signValues.password==""){
+            setEmpty(true);
+        }else {
+            signAccount();
+        }
     }
 
     const onChange=event=>{
+        setEmpty(false);
+        setTip(false);
         setSignValue({...signValues,[event.target.name]:event.target.value})
     }
 
@@ -57,11 +70,17 @@ const SignIn=()=>{
                         <input name="password" value={signValues.password} onChange={onChange} className="bg-dark-four text-dark-five appearance-none border-2 border-dark-one  w-full py-2 px-4 focus:outline-none focus:bg-dark-five focus:text-dark-one  focus:border-dark-one"/>
                     </div>
                 </div>
+                {empty?<div className="block text-dark-two md:text-center text-red-600 text-sm pr-4 mb-6"                                       >
+                    * Please Enter Something :(
+                </div>:null}
+                {tip?<div className="block text-dark-two md:text-center text-red-600 text-sm pr-4 mb-6"                                       >
+                    * Invalid email or password :(
+                </div>:null}
                 <div className="md:flex md:items-center">
                     <div className="md:w-1/3"></div>
                     <div className="md:w-2/3 flex md:justify-start justify-center">
                         <button
-                            className="shadow bg-dark-two text-dark-five hover:bg-dark-one focus:shadow-outline focus:outline-none py-2 px-4 "
+                            className="shadow bg-dark-one text-dark-five hover:bg-dark-two focus:shadow-outline focus:outline-none py-2 px-4 "
                             type="submit">
                             Sign in
                         </button>

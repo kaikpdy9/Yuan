@@ -2,8 +2,8 @@ import React, {useContext, useEffect, useRef, useState} from "react";
 import {MouseContext} from "../../context/mouseContext";
 import {gsap} from "gsap/dist/gsap";
 import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
-import Logo from "../Logo";
-import {Link} from "react-router-dom";
+import {Link,useHistory} from "react-router-dom";
+
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -11,13 +11,22 @@ const Header=()=>{
 
 
     const {cursorType,setCursorType}=useContext(MouseContext);
-    const isLogin=localStorage.getItem('isLogin')
+    const [isLogin,setIsLogin]=useState(localStorage.getItem('isLogin'))
+    const userName=localStorage.getItem('userName');
+    const router=useHistory
+
     const headerRef=useRef();
+
+    const signOut=()=>{
+        localStorage.removeItem('isLogin');
+        localStorage.removeItem('userName');
+        setIsLogin(false);
+    }
 
     const lastScrollTop=window.pageYOffset || document.documentElement.scrollTop;
 
     useEffect(()=>{
-
+        console.log(userName,'username')
         if(typeof window!=="undefined"){
             window.addEventListener("scroll",()=>{
                 const st = window.pageYOffset || document.documentElement.scrollTop;
@@ -158,7 +167,12 @@ const Header=()=>{
                 <div className="col-span-2 md:col-span-1 flex justify-center items-center"><Link to={'/reviews'}><h5 onMouseEnter={()=>setCursorType("hovered")}
                                                                                                                       onMouseLeave={()=>setCursorType("")}>Notes</h5></Link></div>
                 <div className="md:col-span-1 col-span-1"></div>
-                {isLogin?<div className="md:col-span-3">已经登录啦</div>: <div className="col-span-5 md:col-span-3 flex justify-center items-center">
+                {isLogin?<div className="md:col-span-3 col-span-4 self-center flex justify-end"><div>{userName}</div><div className="ml-6" onMouseEnter={()=>setCursorType("hovered")}
+                                                                                                              onMouseLeave={()=>setCursorType("")} onClick={()=>signOut()}>
+                    <svg className="md:mr-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 5C13.66 5 15 6.34 15 8C15 9.66 13.66 11 12 11C10.34 11 9 9.66 9 8C9 6.34 10.34 5 12 5ZM12 19.2C9.5 19.2 7.29 17.92 6 15.98C6.03 13.99 10 12.9 12 12.9C13.99 12.9 17.97 13.99 18 15.98C16.71 17.92 14.5 19.2 12 19.2Z" fill="#020202"/>
+                    </svg>
+                </div></div>: <div className="col-span-5 md:col-span-3 flex justify-center items-center">
                     <div className="md:px-4 mr-2">
                         <Link to="/sign-in">
                             <h5 onMouseEnter={()=>setCursorType("hovered")}
