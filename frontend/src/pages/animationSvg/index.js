@@ -19,10 +19,10 @@ const AnimationSvg=()=>{
     }
 
     useEffect(()=>{
-        queue.loadFile({id:"homeDance1",src:'http://r9y4w62r2.hn-bkt.clouddn.com/image/dance1.png'});
-        queue.loadFile({id:'homeDance2',src:'http://r9y4w62r2.hn-bkt.clouddn.com/image/dance2.png'});
-        queue.loadFile({id:'homeDance3',src:'http://r9y4w62r2.hn-bkt.clouddn.com/image/dance3.png'});
-        queue.loadFile({id:'homeDance4',src:'http://r9y4w62r2.hn-bkt.clouddn.com/image/dance4.png'});
+        queue.loadFile({id:"homeDance1",src:'http://r9y4w62r2.hn-bkt.clouddn.com/beta/dance1.png'});
+        queue.loadFile({id:'homeDance2',src:'http://r9y4w62r2.hn-bkt.clouddn.com/beta/dance2.png'});
+        queue.loadFile({id:'homeDance3',src:'http://r9y4w62r2.hn-bkt.clouddn.com/beta/dance3.png'});
+        queue.loadFile({id:'homeDance4',src:'http://r9y4w62r2.hn-bkt.clouddn.com/beta/dance4.png'});
         queue.on("fileload",handleFileComplete);
         queue.on("progress",event=>{
             let progress=Math.floor(event.progress*100);

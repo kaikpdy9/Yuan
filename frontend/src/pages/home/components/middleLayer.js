@@ -11,7 +11,7 @@ const MiddleLayer=()=>{
                     </div>
                     <div className="col-span-4 text-right">
                         <div className="grid grid-cols-12  md:mb-12 mb-6">
-                            <div className="md:col-span-8 col-span-10 md:text-3xl">scroll down</div>
+                            <div className="md:col-span-8 col-span-10 md:text-xl">scroll down</div>
                             <div className="md:col-span-4 col-span-2">
                             <svg className="md:h-8 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="expand_more">

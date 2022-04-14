@@ -17,7 +17,7 @@ const DarkSide=()=>{
     return(
     <div className="bg-dark-one text-dark">
         <div className="text-center pt-10">
-            <p className="mx-6 md:my-6 md:mb-10 md:text-3xl text-xl">Melody</p>
+            <p className="mx-6 md:my-6 md:mb-10 md:text-2xl text-xl">Melody</p>
             <p className="m-6 md:text-base text-xs">The heart beats in time with the sounds of piano</p>
             <p className="m-6 md:text-base text-xs">The hand swaying to the guitar chord</p>
             <p className="m-6 md:text-base text-xs">Each note is remembered, thought about and adored</p>
@@ -50,7 +50,7 @@ const DarkSide=()=>{
         </div>
 
         <div className="text-center">
-            <p className="mx-6 mb-10 md:text-3xl text-xl">Beats</p>
+            <p className="mx-6 mb-10 md:text-2xl text-xl">Beats</p>
         </div>
 
         <div className="grid-cols-12 grid pb-10 ">

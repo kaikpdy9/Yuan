@@ -6,6 +6,8 @@ node_modules/
 .env
 .idea
 frontend/node_modules
+frontend/src/pages/pixelWork
+frontend/src/pages/svgWork
 
 # testing
 /coverage

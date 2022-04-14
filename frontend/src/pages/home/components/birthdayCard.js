@@ -1,11 +1,35 @@
-import React from "react";
+import React, {useEffect,useRef} from "react";
+import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
+import {gsap} from "gsap/dist/gsap"
+
+gsap.registerPlugin(ScrollTrigger)
 
 const BirthdayCard = () => {
+
+    const down=useRef();
+    const up=useRef();
+    const ready=useRef();
+    const happyTl=gsap.timeline();
+
+    useEffect(()=>{
+        happyTl.to([up.current,down.current],{
+            scrollTrigger:{
+                trigger:up.current,
+                start:"top 50%",
+                end:"50% 50%",
+                toggleActions:"restart pause reverse pause",
+                scrub:1
+            },
+            y:100,
+            opacity:0,
+        })
+    },[])
+
     return (
         <div>
             <svg className="w-full md:h-card h-64" viewBox="0 0 1073 928" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="OBJECTS">
-                    <g id="down">
+                    <g id="down" ref={down}>
                         <g id="Group"  opacity="0.4">
                             <g id="Vector"  opacity="0.4">
                                 <path
@@ -755,7 +779,7 @@ const BirthdayCard = () => {
                             </g>
                         </g>
                     </g>
-                    <g id="ready">
+                    <g id="ready" ref={ready}>
                         <path id="Vector_151" d="M1025.29 276.65H27.61V900.32H1025.29V276.65Z" fill="#D6D6D6"/>
                         <path id="Vector_152" d="M1014.82 289.08H39.55V888.64H1014.82V289.08Z" fill="white"/>
                         <g id="context">
@@ -1512,7 +1536,7 @@ const BirthdayCard = () => {
                                   stroke="#1C1C1C" stroke-width="2" stroke-miterlimit="10"/>
                         </g>
                     </g>
-                    <g id="up">
+                    <g id="up" ref={up}>
                         <g id="up_2">
                             <path id="Vector_399"
                                   d="M1004.11 391.44V446.96L536.17 659.53L68.22 446.96V391.44H0V927.61H1072.33V391.44H1004.11Z"

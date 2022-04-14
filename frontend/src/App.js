@@ -12,6 +12,8 @@ import SignIn from "./pages/sign/signIn";
 import AuthContextProvider from "./context/authContext";
 import Preload from "./pages/preload";
 import AnimationSvg from "./pages/animationSvg";
+import SvgWork from "./pages/svgWork";
+import PixelWork from "./pages/pixelWork";
 
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
           <Switch>
           <Route exact path={'/'} component={AnimationSvg} />
           <Route exact path={'/preload'} component={Preload} />
+          <Route exact path={'/svg-work'} component={SvgWork}/>
+          <Route exact path={'/pixel-work'} component={PixelWork}/>
           <Layout>
               <Route exact path={'/account'} component={Account} />
               <Route exact path={'/design'} component={DesignSystem} />
