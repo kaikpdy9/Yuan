@@ -14,13 +14,14 @@ import Preload from "./pages/preload";
 import AnimationSvg from "./pages/animationSvg";
 import SvgWork from "./pages/svgWork";
 import PixelWork from "./pages/pixelWork";
-
+import PreloadContextProvider from "./context/preloadContext";
 
 function App() {
   return (
       <MouseProvider>
       <DotRing/>
       <AuthContextProvider>
+       <PreloadContextProvider>
       <Router basename="/">
           <Switch>
           <Route exact path={'/'} component={AnimationSvg} />
@@ -37,6 +38,7 @@ function App() {
           </Layout>
           </Switch>
       </Router>
+       </PreloadContextProvider>
       </AuthContextProvider>
       </MouseProvider>
   );

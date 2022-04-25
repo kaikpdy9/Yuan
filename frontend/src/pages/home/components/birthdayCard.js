@@ -1,6 +1,8 @@
-import React, {useEffect,useRef} from "react";
+import React, {useEffect,useRef,useContext} from "react";
 import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
 import {gsap} from "gsap/dist/gsap"
+import {isMobile} from "../../../utils/utils";
+import {PreloadContext} from "../../../context/preloadContext";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -15,13 +17,23 @@ const BirthdayCard = () => {
         happyTl.to([up.current,down.current],{
             scrollTrigger:{
                 trigger:up.current,
-                start:"top 50%",
-                end:"50% 50%",
+                start:isMobile()?"top 70%":"top 50%",
+                end:isMobile()?"50% 70%":"50% 50%",
                 toggleActions:"restart pause reverse pause",
-                scrub:1
+                scrub:1,
             },
             y:100,
             opacity:0,
+        }).to([ready.current],{
+            scrollTrigger:{
+                trigger:up.current,
+                start:isMobile()?"top 70%":"top 50%",
+                end:isMobile()?"50% 70%":"50% 50%",
+                toggleActions:"restart pause reverse pause",
+                scrub:1,
+            },
+            scale:1.2,
+            transformOrigin:'50% 50%',
         })
     },[])
 

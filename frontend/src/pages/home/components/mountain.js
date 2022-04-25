@@ -1,20 +1,24 @@
-import React, {useEffect, useRef} from "react";
+import React, {useContext, useEffect, useRef} from "react";
 import {gsap} from "gsap/dist/gsap";
 import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
 import {MotionPathPlugin} from "gsap/dist/MotionPathPlugin";
+import {isMobile} from "../../../utils/utils";
+import {PreloadContext} from "../../../context/preloadContext";
 
 gsap.registerPlugin(ScrollTrigger,MotionPathPlugin)
 
+
+
 const Mountain=()=>{
 
-    const sun=useRef()
+    const sun=useRef();
 
     useEffect(()=>{
         gsap.to([sun.current],{
             scrollTrigger:{
                 trigger:sun.current,
-                start:"top 50%",
-                end:"bottom 50%",
+                start:isMobile()?"top 30%":"top 50%",
+                end:isMobile()?"bottom 30%":"bottom 50%",
                 toggleActions:"restart pause reverse pause",
                 scrub:1
             },
